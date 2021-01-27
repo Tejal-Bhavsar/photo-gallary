@@ -25,6 +25,9 @@ export default function UploadForm() {
         <>
           <div className="addform"> 
             <form>
+                <label for="file-upload"    class="custom-file-upload">
+                <img className="form-btn" src="https://img.icons8.com/dusk/64/000000/add-image.png"/>
+                </label>
                 <input onChange={handleChange} type="file" />
                 { file ? <div> {file.name} </div> : <div> {error}</div>}
             </form>
