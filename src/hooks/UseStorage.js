@@ -11,17 +11,17 @@ export default function UseStorage(file) {
         const storageRef = DbStorage.ref(file.name);
         const firestoreRef = DbFirestore.collection("images")
         const createdAt = timestamp
-
+        // stored in storage as a media image storage
         storageRef.put(file).on('state_changed', (snapshot) => {
             let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             setProgress(percentage);
         },(err) => {
             setError(err);
-        }, async () => {
+        }, async () => {  // to get url downloaded for d
             const url = await storageRef.getDownloadURL();
             console.log(url,"hereis url")
             // adding images url to firestore
-             firestoreRef.add({url,createdAt})
+             firestoreRef.add({url,createdAt})  
              setUrl(url);
         }
         )

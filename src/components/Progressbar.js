@@ -5,7 +5,7 @@ export default function Progressbar({file,setFile}) {
     const {  url,progress } = UseStorage(file);
 
     useEffect(() => {
-         if(url   ){
+         if(url  ){
              setFile(null)
          }
     }, [url,setFile])
