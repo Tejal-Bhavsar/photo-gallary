@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 /* #4F4341; #C2CCC2 */
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Yusei Magic', sans-serif;
     background-color: #554A62  !important; 
@@ -66,9 +70,10 @@ input[type="file"] {
 }
 
 
-.img-wrap img {
+.img-wrap  img {
     object-fit: cover;
     width: 100%;
+    height: 100px;
     height: auto;
     border-radius: 10px;
     transition: all 2s ease-in-out;
@@ -86,10 +91,10 @@ input[type="file"] {
     grid-column: span 1;
 } */
 
-/* .img-wrap:nth-child(1n) {
-    grid-row: span 3;
-    grid-column: span 1;
-  } */
+.img-wrap:nth-child(4n) {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
 
   .img:hover{
     transform: scale(1.1);

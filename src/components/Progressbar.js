@@ -10,7 +10,7 @@ export default function Progressbar({file,setFile}) {
          }
     }, [url,setFile])
     return (
-        <div className="progressbar" style={{width: progress + '%'}}>
+        <div className="progressbar" style={{width: (progress + '%') /2 }}>
             
         </div>
     )

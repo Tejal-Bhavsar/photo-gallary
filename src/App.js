@@ -8,7 +8,7 @@ import UploadForm from './components/UploadForm';
 function App() {
   const [ selected, setSelected ] = useState(null)
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor : 'black'}}>
       <Title />
       <UploadForm/>
       <Images setSelected={setSelected} />
